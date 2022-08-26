@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "Discount.Grpc.Protos";
+
+service DiscountProtoService {
+	rpc GetDiscount (NameDiscountRequest) returns (CouponModel);
+	rpc CreateDiscount (CommandDiscountRequest) returns (CouponModel);
+	rpc UpdateDiscount (CommandDiscountRequest) returns (BoolResponse);
+	rpc DeleteDiscount (NameDiscountRequest) returns (BoolResponse);
+}
+
+message NameDiscountRequest {
+	string productName = 1;
+}
+
+message CommandDiscountRequest {
+	CouponModel coupon = 1;
+}
+
+message CouponModel {
+	int32 id = 1;
+	string productName = 2;
+	string description = 3;
+	int32 amount = 4;
+}
+
+message BoolResponse {
+	bool success = 1;
+}
