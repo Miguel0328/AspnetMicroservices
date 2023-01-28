@@ -1,11 +1,10 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AspnetRunBasics.Extensions;
+using AspnetRunBasics.Models;
+using AspnetRunBasics.Services.IServices;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System;
-using AspnetRunBasics.Services.IServices;
-using AspnetRunBasics.Models;
-using AspnetRunBasics.Extensions;
 
 namespace AspnetRunBasics.Services
 {

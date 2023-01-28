@@ -1,5 +1,5 @@
-using Gateway.Aggregator.Services.IServices;
 using Gateway.Aggregator.Services;
+using Gateway.Aggregator.Services.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
